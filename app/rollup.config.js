@@ -1,3 +1,4 @@
+import nodeResolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import copy from "rollup-plugin-copy";
 
@@ -12,6 +13,7 @@ for (const example of examplesList) {
       format: "es",
     },
     plugins: [
+      nodeResolve(),
       typescript({
         compilerOptions: { target: "es6" },
       }),

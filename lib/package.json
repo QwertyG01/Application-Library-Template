@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf \"./dist\" && rollup -c",
+    "build": "rimraf \"./dist\" && rollup -c && npm run copy-lib",
+    "copy-lib": "copyfiles -f \"./dist/**/*\" \"../app/lib\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "giovanni",
@@ -11,6 +12,7 @@
   "dependencies": {
     "rimraf": "^3.0.2",
     "rollup": "^2.74.1",
+    "three": "^0.141.0",
     "typescript": "^4.6.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { vabene } from "lib";
+import { vabene } from "../../lib";
 
 console.log("Ciao ");
 
